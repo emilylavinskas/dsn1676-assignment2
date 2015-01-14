@@ -1,0 +1,112 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  background-color: #531C53;
+
+  font: normal 100%/1.5 sans-serif;
+  color: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.clock-face {
+    height: 300px;
+    width: 300px;
+    background-image: url(../images/clock-face.svg);
+    position: relative;
+    margin: 0 auto;
+}
+
+.clock-face:target .hand-hour {
+    transform: rotate(360deg);
+}
+
+.clock-face:target .hand-minute {
+    transform: rotate(4320deg);
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.forward-button {
+    font-size: 1em;
+    color: #fff;
+    background-color: #E65C00;
+    font-family: sans-serif;
+    border-radius: 50%;
+    width: 7em;
+    line-height: 7em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 2em;
+    transition: all 0.2s linear;
+}
+
+.forward-button:hover {
+    background-color: #fff;
+    cursor: pointer;
+    color: #E65C00;
+    opacity: 1;
+}
+
+.forward-button:active {
+    background-color: red;
+}
+
+.backward-button {
+    font-size: 1em;
+    color: #fff;
+    background-color: #29A3A3;
+    font-family: sans-serif;
+    border-radius: 50%;
+    width: 7em;
+    line-height: 7em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s linear;
+}
+
+.backward-button:hover {
+    background-color: #fff;
+    cursor: pointer;
+    color: #29A3A3;
+    opacity: 1;
+}
+
+.backward-button:active {
+    background-color: red;
+}
+
+.hand {
+    width: 14px;
+    position: absolute;
+    left: 143px;
+    bottom: 50%;
+    transition: all 6s linear;
+    transform-origin: bottom center;
+}
+
+.center {
+    width: 28px;
+    position: relative;
+    left: 135px;
+    top: 135px;
+}
